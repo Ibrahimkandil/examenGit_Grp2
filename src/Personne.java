@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Personne {
 
     private String nom;
@@ -34,5 +36,24 @@ public class Personne {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Personne{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", age=" + age +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Personne personne)) return false;
+        return getAge() == personne.getAge() && Objects.equals(getNom(), personne.getNom()) && Objects.equals(getPrenom(), personne.getPrenom());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNom(), getPrenom(), getAge());
+    }
 }
