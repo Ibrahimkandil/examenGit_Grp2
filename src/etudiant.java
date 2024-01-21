@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class etudiant extends Personne{
     private String nom;
     private String prenom;
@@ -119,5 +121,34 @@ public class etudiant extends Personne{
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "etudiant{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", age=" + age +
+                ", classe='" + classe + '\'' +
+                ", niveau='" + niveau + '\'' +
+                ", specialite='" + specialite + '\'' +
+                ", option='" + option + '\'' +
+                ", matricule='" + matricule + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        etudiant etudiant = (etudiant) o;
+        return age == etudiant.age && Objects.equals(nom, etudiant.nom) && Objects.equals(prenom, etudiant.prenom) && Objects.equals(classe, etudiant.classe) && Objects.equals(niveau, etudiant.niveau) && Objects.equals(specialite, etudiant.specialite) && Objects.equals(option, etudiant.option) && Objects.equals(matricule, etudiant.matricule) && Objects.equals(adresse, etudiant.adresse) && Objects.equals(telephone, etudiant.telephone) && Objects.equals(email, etudiant.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), nom, prenom, age, classe, niveau, specialite, option, matricule, adresse, telephone, email);
+    }
 }

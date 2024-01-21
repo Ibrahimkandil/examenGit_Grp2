@@ -23,7 +23,7 @@ public class Main {
         GIT.etudier(etudiant4);
 
         personne.toString();
-
+        etudiant1.toString();
 
 
 
