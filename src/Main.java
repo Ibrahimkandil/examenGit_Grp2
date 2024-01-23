@@ -24,8 +24,5 @@ public class Main {
 
         personne.toString();
         etudiant1.toString();
-
-
-
         }
 }
