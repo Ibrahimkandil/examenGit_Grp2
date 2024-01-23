@@ -110,33 +110,4 @@ public class enseignat extends Personne {
         this.nationalite = nationalite;
     }
 
-    @Override
-    public String toString() {
-        return "enseignat{" +
-                "nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", age=" + age +
-                ", matricule='" + matricule + '\'' +
-                ", adresse='" + adresse + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", email='" + email + '\'' +
-                ", dateNaissance='" + dateNaissance + '\'' +
-                ", lieuNaissance='" + lieuNaissance + '\'' +
-                ", nationalite='" + nationalite + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        enseignat enseignat = (enseignat) o;
-        return age == enseignat.age && Objects.equals(nom, enseignat.nom) && Objects.equals(prenom, enseignat.prenom) && Objects.equals(matricule, enseignat.matricule) && Objects.equals(adresse, enseignat.adresse) && Objects.equals(telephone, enseignat.telephone) && Objects.equals(email, enseignat.email) && Objects.equals(dateNaissance, enseignat.dateNaissance) && Objects.equals(lieuNaissance, enseignat.lieuNaissance) && Objects.equals(nationalite, enseignat.nationalite);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), nom, prenom, age, matricule, adresse, telephone, email, dateNaissance, lieuNaissance, nationalite);
-    }
 }
