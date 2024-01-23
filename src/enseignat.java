@@ -112,17 +112,17 @@ public class enseignat extends Personne {
 
     @Override
     public String toString() {
-        return "enseignat{" +
-                "nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
+        return "enseignat{"    +
+                "nom='" + nom + '\''     +
+                ", prenom='" + prenom + '\''    +
                 ", age=" + age +
-                ", matricule='" + matricule + '\'' +
+                ", matricule='" + matricule + '\''    +
                 ", adresse='" + adresse + '\'' +
-                ", telephone='" + telephone + '\'' +
+                ", telephone='" + telephone + '\''   +
                 ", email='" + email + '\'' +
-                ", dateNaissance='" + dateNaissance + '\'' +
-                ", lieuNaissance='" + lieuNaissance + '\'' +
-                ", nationalite='" + nationalite + '\'' +
+                ", dateNaissance='" + dateNaissance + '\''   +
+                ", lieuNaissance='" + lieuNaissance + '\''   +
+                ", nationalite='" + nationalite + '\''   +
                 '}';
     }
 
@@ -139,4 +139,20 @@ public class enseignat extends Personne {
     public int hashCode() {
         return Objects.hash(super.hashCode(), nom, prenom, age, matricule, adresse, telephone, email, dateNaissance, lieuNaissance, nationalite);
     }
+
+    public void afficherEnseignant(){
+        System.out.println( "nom='" + nom + '\''+
+                        ", prenom='" + prenom + '\''+", age=" + age +
+                         ", matricule='" + matricule +
+                          ", adresse='" + adresse +
+                        ", telephone='" + telephone +
+                        ", email='" + email +
+                        ", dateNaissance='" + dateNaissance +
+                        ", lieuNaissance='" + lieuNaissance +
+                        ", nationalite='" + nationalite + '\''
+                );
+
+
+    }
+
 }

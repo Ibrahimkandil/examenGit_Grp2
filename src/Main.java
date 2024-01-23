@@ -15,7 +15,7 @@ public class Main {
 
         //cree un object enseignet
         enseignat enseignat = new enseignat("Diallo", "Mamadou", 25, "GIT", "ALINFO1", "Informatique", "Informatique", "233AFT0661", "ARIANA", "77-777-77-77", "", "", "", "");
-
+        enseignat enseignat2 = new enseignat("sywar", "khmiri", 50, "git2", "ingenieur", "chimie", "science", "12645", "ARIANA", "586015695", "sywar.khmiri@gmail.com", "05-12-1966", "ariana", "tunisienne");
         classs GIT = new classs(enseignat, new etudiant[5], 5, 1);
         GIT.etudier(etudiant1);
         GIT.etudier(etudiant2);
@@ -25,6 +25,19 @@ public class Main {
         personne.toString();
         etudiant1.toString();
         enseignat.toString();
+        enseignat2.toString();
+
+
+        // Calling hashCode method
+        int hashCode1 = enseignat.hashCode();
+        int hashCode2 = enseignat2.hashCode();
+
+        boolean areEqual = enseignat.equals(enseignat2);
+
+        System.out.println("HashCode 1: " + hashCode1);
+        System.out.println("HashCode 2: " + hashCode2);
+        System.out.println("Are equal: " + areEqual);
+
 
 
 
