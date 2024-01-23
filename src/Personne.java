@@ -56,15 +56,7 @@ public class Personne {
     public int hashCode() {
         return Objects.hash(getNom(), getPrenom(), getAge());
     }
-    public boolean estMajeur() {
-        return age >= 18;
-    }
 
-
-    public void mettreAJourAge(int anneeDeNaissance) {
-        // On suppose que l'année actuelle est 2024
-        this.age = 2024 - anneeDeNaissance;
-    }
 
 
 
