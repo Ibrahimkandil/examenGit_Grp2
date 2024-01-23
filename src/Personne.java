@@ -61,6 +61,13 @@ public class Personne {
     }
 
 
+    public void mettreAJourAge(int anneeDeNaissance) {
+        // On suppose que l'année actuelle est 2024
+        this.age = 2024 - anneeDeNaissance;
+    }
+
+
+
 
 
 }
