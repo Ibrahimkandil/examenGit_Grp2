@@ -4,14 +4,22 @@ public class enseignat extends Personne {
     private String nom;
     private String prenom;
     private int age;
+    private double Salaire;
 
     private String matricule;
+
+
+
+
     private String adresse;
+
+
     private String telephone;
     private String email;
     private String dateNaissance;
     private String lieuNaissance;
     private String nationalite;
+
 
     public enseignat(String nom, String prenom, int age, String classe, String niveau, String specialite, String option, String matricule, String adresse, String telephone, String email, String dateNaissance, String lieuNaissance, String nationalite) {
         super(nom, prenom, age);
@@ -23,7 +31,25 @@ public class enseignat extends Personne {
         this.lieuNaissance = lieuNaissance;
         this.nationalite = nationalite;
     }
+    public enseignat(String nom, String prenom, int age,  double Salaire,String classe, String niveau, String specialite, String option, String matricule, String adresse, String telephone, String email, String dateNaissance, String lieuNaissance, String nationalite) {
+        super(nom, prenom, age);
+        this.matricule = matricule;
+        this.adresse = adresse;
+        this.telephone = telephone;
+        this.email = email;
+        this.dateNaissance = dateNaissance;
+        this.lieuNaissance = lieuNaissance;
+        this.nationalite = nationalite;
+        this.Salaire=Salaire;
+    }
 
+    public double getSalaire() {
+        return Salaire;
+    }
+
+    public void setSalaire(double salaire) {
+        Salaire = salaire;
+    }
     @Override
     public String getNom() {
         return nom;
@@ -110,6 +136,9 @@ public class enseignat extends Personne {
         this.nationalite = nationalite;
     }
 
+    public double cal_salaire_avecTAX(double pourcentage){
+        return (this.Salaire*(100-pourcentage)/100);
+    }
     @Override
     public String toString() {
         return "enseignat{"    +
