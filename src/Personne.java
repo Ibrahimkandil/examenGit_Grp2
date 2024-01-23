@@ -56,4 +56,11 @@ public class Personne {
     public int hashCode() {
         return Objects.hash(getNom(), getPrenom(), getAge());
     }
+    public boolean estMajeur() {
+        return age >= 18;
+    }
+
+
+
+
 }
